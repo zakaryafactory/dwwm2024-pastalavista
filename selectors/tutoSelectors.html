@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercices de Sélection d'Éléments</title>
+    <style>
+        .highlight { color: red; }
+        .text-large { font-size: 20px; }
+        #unique-section { background-color: lightblue; padding: 20px; }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <h1 class="title">Bienvenue sur Notre Page d'Exercices</h1>
+        <nav>
+            <ul id="navigation-menu" class="menu">
+                <li class="menu-item active">Accueil</li>
+                <li class="menu-item">À propos</li>
+                <li class="menu-item">Services</li>
+                <li class="menu-item">Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="unique-section">
+        <h2 class="header">Section Unique</h2>
+        <p class="highlight">Ce paragraphe est mis en évidence.</p>
+        <p><span class="highlight">Test</span></p>
+        <p id="special-paragraph" class="text-large">Un autre paragraphe avec texte plus grand.</p>
+        <button onclick="alert('Vous avez cliqué le bouton !')">Cliquez-moi</button>
+    </section>
+
+    <article id="main-article" class="content">
+        <h3>Article Principal</h3>
+        <p>Description de l'article qui contient plusieurs <span class="highlight">éléments span</span> à <span class="highlight">sélectionner</span>.</p>
+    </article>
+
+    <footer>
+        <p>© 2023 Tous droits réservés</p>
+    </footer>
+
+<script>
+    // const header = document.getElementById('main-header');
+    // header.style.backgroundColor = "red";
+    
+    const span = document.querySelector('#main-article .highlight');
+    span.style.color = "green";
+
+    const allHighlight = document.querySelectorAll('.highlight');
+    allHighlight.forEach( item => {
+        item.style.color = "orange";
+        item.style.fontWeight = "bold";
+        item.style.fontSize = "24px"; })
+
+    const menuItems = document.querySelectorAll('nav .menu-item');
+    menuItems.forEach( item => {
+        item.style.border = '1px solid blue';
+    } )
+
+    // Evènement sur titre principal
+    const mainTitle = document.querySelector('h1')
+    mainTitle.addEventListener('click', () => {
+        mainTitle.style.backgroundColor = "yellow"
+    })
+
+    // Evènements sur chaque span.highlight
+    const spans = document.querySelectorAll('span.highlight')
+    spans.forEach( span => {
+        span.addEventListener('mouseover', () => {
+            span.style.color = "red";
+        })
+        span.addEventListener('mouseout', () => {
+            span.style.color = "black";
+        })        
+    })
+    
+
+
+
+</script>
+
+</body>
+</html>
