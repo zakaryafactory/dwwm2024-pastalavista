@@ -12,7 +12,23 @@
     --secondary-color: #af9c7f;
     --light-color: #ECE8D9;
     --dark-color: #474027;
+
+    --background-color: #ECE8D9;
+    --font-color: #474027;
+    --link-color: #c27a28;
+    --nav-link-color: #474027;
 }
+
+[data-theme="dark"] {
+    --primary-color: #c27a28;
+    --secondary-color: #af9c7f;
+    --light-color: #ECE8D9;
+    --dark-color: #474027;
+
+    --background-color: #474027;
+    --font-color: #ECE8D9;
+    --nav-link-color: #ECE8D9;
+  }
 
 * {
     margin: 0;
@@ -27,7 +43,7 @@ p {
 }
 
 a {
-    color: var(--dark-color);
+    color: var(--link-color);
 }
 
 .container {
@@ -35,8 +51,10 @@ a {
 }
 
 .body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+
     padding: 3rem;
-    background-color: #ECE8D9;
     font-family: "Maven Pro", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -81,6 +99,10 @@ a {
 .navigation__item,
 .navigation__item a {
     transition: color .5s ease;
+}
+
+.navigation__item a {
+    color: var(--nav-link-color)
 }
 
 .navigation__item::before {
@@ -173,6 +195,7 @@ a {
 }
 
 .gallery__item:hover {
+    cursor: pointer;
     transform: scale(1.2) rotate(5deg);
 }
 
@@ -368,6 +391,9 @@ a {
     flex: 1 1 33%;
 }
 
+.links__item a {
+    color: var(--nav-link-color)
+}
 
 .links__item,
 .links__item a {

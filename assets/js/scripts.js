@@ -1,4 +1,6 @@
 // DOM selection
+const themeToggle = document.querySelector('.navigation__item--themeToggle');
+
 const lightbox = document.querySelector('.lightbox');
 const lightboxImage = document.querySelector('.lightbox__image');
 const images = document.querySelectorAll('.gallery__item img');
@@ -7,6 +9,17 @@ const lightboxBackground = document.querySelector('.lightbox__background');
 
 const reservationForm = document.querySelector('.reservation__form');
 const nameInput = document.querySelector('.form__input--name');
+
+/////////////////////////////////////////////////////////////
+// DARK THEME
+/////////////////////////////////////////////////////////////
+
+themeToggle.addEventListener('click', () => {
+  const body = document.body;
+  const newTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+  body.dataset.theme = newTheme;
+  localStorage.setItem('theme', newTheme); // Sauvegarder le thème dans le stockage local
+});
 
 //////////////////////////////////////////////////////////////
 // LIGHTBOX
