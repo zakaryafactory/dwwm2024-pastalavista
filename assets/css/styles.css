@@ -22,6 +22,10 @@
     list-style: none;
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
 a {
     color: var(--dark-color);
 }
@@ -311,3 +315,46 @@ a {
 }
 
 .links__item a { text-decoration: none; }
+
+
+/***************** RESPONSIVE HACKS ******************/
+@media screen and (max-width: 1024px){
+    .specialites__menu {
+        margin-bottom: 1rem;
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .intro__text {
+        width: 50%;
+    }
+    
+    .intro__image {
+        width: 50%;
+    }
+
+    
+    .reservation__form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .intro__text {
+        width: 100%;
+    }
+    
+    .intro__image {
+        width: 100%;
+    }
+
+    .specialites__menu {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .reservation__form {
+        width: 100%;
+    }
+}
