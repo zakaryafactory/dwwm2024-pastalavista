@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Mystery+Quest&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/all.min.css">
+
 </head>
 <body class="body">
 
@@ -93,7 +94,6 @@
                 <li class="gallery__item"><img src="./assets/images/plats/8.jpg" alt=""></li>
                 <li class="gallery__item"><img src="./assets/images/plats/9.jpg" alt=""></li>
                 <li class="gallery__item"><img src="./assets/images/plats/10.jpg" alt=""></li>
-
             </ul>
         </section>
 
@@ -102,7 +102,7 @@
             <form action="" class="form reservation__form">
                 <div class="form__groupField">
                     <label for="" class="form__label">Nom et Prénom</label>
-                    <input type="text" class="form__input">
+                    <input type="text" class="form__input form__input--name">
                 </div>
                 <div class="form__groupField">
                     <label for="" class="form__label">Email</label>
@@ -119,6 +119,16 @@
                 <button class="form__button">Réserver ma table</button>
             </form>
         </section>
+
+        <div class="lightbox">
+            
+            <div class="lightbox__wrapper">
+                <div class="lightbox__closeButton"><i class="fa-brands fa-x"></i></div>
+                <div class="lightbox__image"></div>
+            </div>
+            <div class="lightbox__background"></div>
+        </div>
+
     </main>
 
     <footer class="footer">
@@ -156,5 +166,8 @@
         </section>
     </footer>
     
+
+    <script type="text/javascript" src="./assets/js/scripts.js"></script>
+
 </body>
 </html>
